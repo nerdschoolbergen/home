@@ -23,85 +23,222 @@
     <section class="main-content">
         <a href="index.html">Go to front</a>
         <h3>
-<a id="nerdschool" class="anchor" href="#nerdschool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Software</h3>
-
+            <a id="nerdschool" class="anchor" href="#nerdschool" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span>
+            </a>Software
+        </h3>
         <p>
             We prefer to keep our software stack as light as possible, so we will mainly use Java and JavaScript with some tools to support
             the languages. Use the OS you want.
         </p>
         <ul>
-            <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java</a></li>
-            <li><a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a></li>
-            <li><a href="https://git-scm.com" target="_blank">Git</a></li>
-            <li><a href="https://www.jetbrains.com/idea/#chooseYourEdition" target="_blank">IntelliJ Community Edition</a></li>
-            <li>An editor that understands JavaScript such as <a href="https://atom.io/" target="_blank">Atom</a>, <a href="https://www.sublimetext.com/"
-                target="_blank">Visual Studio Code</a>, or <a href="https://code.visualstudio.com/" target="_blank">Sublime Text</a>.
-                IntelliJ as mentioned above also works well (and many others).</li>
+            <li>
+                <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java</a>
+                <p>
+                    Java is an object-oriented programming language which runs on the virtual JVM platform on any OS. A basic understanding of
+                    OO such as <a href="http://geekswithblogs.net/NETCode/archive/2013/08/07/the-basics---four-pillars-of-object-oriented-programming.aspx">the 4 pillars of OO</a>                    and using basic data structures such as Arrays and Maps is recommended. Look up some free Java learning
+                    resources between workshops if there are concepts you feel unsure of.
+                </p>
+            </li>
+            <li>
+                <a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a>
+                <p>Maven is a build and infrastructure tool. It solves tedious tasks such as manging your dependencies (it'll
+                    automatically download and resolve any thirdparty dependency you list in <code>POM.xml</code> which is
+                    Maven's manifest file), compiling your code, run your tests, and package your application for deployment.
+                </p>
+                <p>
+                    All Java projects we make for our workshops are made using Maven. This will give us a standardized way to run our code and
+                    tests, and it means attendees only need to learn this one build tool (others are Gradle or Ant, for example).
+                    <strong>In other words: learn Maven!</strong>
+                </p>
+                <p>
+                    Please read the getting started resources listed further down on this page and make a hello world Maven project in your editor,
+                    be it Eclipse, Vim, IntelliJ or something else (we recommend IntelliJ Community Edition).
+                </p>
+                <p>
+                    <strong>Make sure you have a working Maven installation and development environment (you can compile code and run tests) before the workshops!</strong>
+                </p>
+            </li>
+            <li>
+                <a href="https://git-scm.com" target="_blank">Git</a>
+                <p>
+                    Git is a version control system (VCS) which is extremely popular these days. We use Git for checking code into a repository
+                    when working on a project, especially when working in teams. There is a learning curve, but getting started
+                    with the basics should be easy enough. We also have a Nerdschool workshop on Git.</p>
+                <p>
+                    The popular GitHub site (think Facebook for your git repositories) has a lot of excellent Git documentation and learning
+                    material.
+                    <strong>Take 15 minutes and go through their <a href="https://try.github.io/levels/1/challenges/1">interactive git tutorial</a></strong>                    for understanding the basics and check out their other documentation resources. There is also some very
+                    nice cheat sheets for Git online, and while you should print one out and stick it near your monitor,
+                    <a href="http://ndpsoftware.com/git-cheatsheet.html">this interactive cheat sheet</a> is really good
+                    to have bookmarked.
+                </p>
+            </li>
+            <li>
+                <a href="https://www.jetbrains.com/idea/#chooseYourEdition" target="_blank">IntelliJ Community Edition</a>
+                <p>
+                    IntelliJ is an IDE which can handle many programming languages and tools, but really excels at Java. IntelliJ is a modern,
+                    elegant, and intuitive editor with clever refactorings and lots of helpful tools under the cover to help
+                    you with some tedious tasks.
+                </p>
+                <p>
+                    <strong>The Community Edition is free, and we recommend using this edition.</strong>
+                </p>
+                <p>
+                    If you prefer any other editor such as Eclipse, please feel free to use the editor of your choise, but make sure your environment
+                    and configuration with Java and Maven works before the workshops. Learn how to open a Maven project in
+                    your editor and how to compile and run tests.
+                </p>
+            </li>
+            <li>
+                <p>
+                    An editor that understands JavaScript such as <a href="https://atom.io/" target="_blank">Atom</a>,
+                    <a href="https://www.sublimetext.com/" target="_blank">Visual Studio Code</a>, or <a href="https://code.visualstudio.com/"
+                    target="_blank">Sublime Text</a>. IntelliJ as mentioned above also works well (and many others).
+                </p>
+            </li>
         </ul>
-
-        <p>
-            Services:
-        </p>
-        <ul>
-            <li>A <a href="https://github.com" target="_blank">GitHub</a> account is preferable</li>
-        </ul>
-
         <h3>
-            
-            <h3>
-<a id="when-what" class="anchor" href="#when-what" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Make sure it works</h3>
-
+            <a id="services" class="anchor" href="#services" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span>
+            Services
+        </h3>
+        <ul>
+            <li>A <a href="https://github.com" target="_blank">GitHub</a> account is preferable.</li>
+        </ul>
+        <h3>
+            <a id="makesureitworks" class="anchor" href="#makesureitworks" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span>
+            </a>Make sure your development environment and tools works
+        </h3>
         <p>
-            <strong>Please make sure your Java installation works and that your Java class paths, SDK, and dependencies are set-up before the workshop!</strong>            We only have 2.5 hours of actual work each session, so the less time spent fixing Java and missing/partial installs
-            the better for everyone's sanity.
-        </p>
-
-        <p>
-            <strong>How to ensure Java is correctly installed</strong>
+            <strong>Please make sure your Java installation works and that your Java class paths, SDK, 
+                and dependencies are set-up in the editor of your choise before the workshop!</strong> We only
+            have 2.5 hours of actual work each session, so the less time spent fixing Java and missing/partial installs the
+            better for everyone's sanity.
         </p>
         <ul>
-            <li>Typing <code>java -version</code> in a terminal should not produce an error</li>
-            <li>If you do get an error, ensure your JDK bin folder is <a href="http://www.computerhope.com/issues/ch000549.htm"
-                target="_blank">on your machine's PATH environment variable</a>. On Windows this is typically <code>C:\Program Files\Java\jdk1.8.0_60\bin</code>                or something similar.</li>
+            <li>Using your editor, create a new hello world project and ensure you can build/compile it using Maven.</li>
+            <li>Also ensure that you can build and run a single unit test using jUnit. The test doesn't have to do anything,
+                just build and run successfully.</li>
         </ul>
-
         <p>
-            <strong>How to ensure Maven is correctly installed</strong>
+            <h4>How to ensure Java is correctly installed</h4>
         </p>
         <ul>
-            <li>Typing <code>mvn --version</code> in a terminal should not produce an error</li>
-            <li>If you do get an error, ensure your Maven bin folder is <a href="http://www.computerhope.com/issues/ch000549.htm"
-                target="_blank">on your machine's PATH environment variable</a>.
+            <li>Typing <code>java -version</code> or just <code>java</code> in a terminal should not produce an error</li>
+            <li>If you do get an error, ensure your JDK bin folder is on your machine's PATH environment variable.
+                <ul>
+                    <li>
+                        Windows:
+                        <ul>
+                            <li>
+                                <a href="http://www.computerhope.com/issues/ch000549.htm" target="_blank">setting the PATH</a>
+                            </li>
+                            <li>
+                                Path to Java (or the <code>JAVA_HOME</code> env. variable) is typically <code>C:\Program Files\Java\jdk1.8.0_60\bin</code>                                or similar depending on your version.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Linux:
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">setting the PATH (TBD)</a>
+                            </li>
+                            <li>
+                                Path to Java TBD
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Mac:
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">setting the PATH (TBD)</a>
+                            </li>
+                            <li>
+                                Path to Java TBD
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
-
+        <h4>How to ensure Maven is correctly installed</h4>
+        <ul>
+            <li>Typing <code>mvn --version</code> or <code>mvn</code> in a terminal should not produce an error</li>
+            <li>If you do get an error, ensure your Maven bin folder is on your machine's PATH environment variable.
+                <ul>
+                    <li>
+                        Windows:
+                        <ul>
+                            <li>
+                                <a href="http://www.computerhope.com/issues/ch000549.htm" target="_blank">setting the PATH</a>
+                            </li>
+                            <li>
+                                Path to Maven (or the <code>MAVEN_HOME</code> env. variable) is typically <code>TBD</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Linux:
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">setting the PATH (TBD)</a>
+                            </li>
+                            <li>
+                                Path to Java TBD
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Mac:
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">setting the PATH (TBD)</a>
+                            </li>
+                            <li>
+                                Path to Java TBD
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
         <p>
             If you're using IntelliJ, Maven comes bundled and should just work (inside IntelliJ).
-        </p>
-          <p>
-            <strong>Ensure that you can compile and run a Java project in IntelliJ/your editor</strong>
-            <br/>
-            This is important! Seriously!
-        </p>
-        
-        <ul>
-            <li>Using your editor - preferably IntelliJ, create a new hello world project and ensure you can build it using Java.</li>
-            <li>Also ensure that you can build and run a single unit test using jUnit. The test doesn't have to do anything, just build and run successfully.</li>  
-        </ul>
-        
-        <p>Here are some resources to get your started with IntelliJ and Java</p>
+        </p>        
+        <h3>
+            <a id="resources" class="anchor" href="#resources" aria-hidden="true">
+                <span aria-hidden="true" class="octicon octicon-link"></span>
+            Resources
+        </h3>
+        <h4>IntelliJ and making Java projects</h4>
         <ul>
             <li><a href="https://www.jetbrains.com/idea/help/creating-and-running-your-first-java-application.html" target="_blank">Creating and Running Your First Java Application</a></li>
             <li><a href="https://www.jetbrains.com/idea/help/creating-run-debug-configuration-for-tests.html" target="_blank">Creating Run/Debug Configuration for Tests</a></li>
             <li><a href="https://www.jetbrains.com/idea/help/creating-tests.html" target="_blank">Creating Tests</a></li>
         </ul>
-        
-        <p>Here are some resources on Maven</p>
+        <h4>Maven</h4>
         <ul>
             <li><a href="https://maven.apache.org/guides/getting-started/index.html" target="_blank">Getting Started Guide</a></li>
-            <li><a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html" target="_blank">Maven in 5 minutes</a></li>            
+            <li><a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html" target="_blank">Maven in 5 minutes</a></li>
             <li><a href="http://www.tutorialspoint.com/maven/maven_creating_project.htm" target="_blank">Maven - Creating Project</a></li>
         </ul>
-<a href="index.html">Go to front</a>
+        <h4>Java</h4>
+        <ul>
+            <li><a href="https://www.codecademy.com/learn/learn-java">CodeAcademy Learn Java course</a></li>
+        </ul>
+        <h4>Git</h4>
+        <ul>
+            <li><a href="https://try.github.io/levels/1/challenges/1">Interactive Try Git tutorial</a></li>
+            <li><a href="http://pcottle.github.io/learnGitBranching/">Interactive Learn Git Branching tutorial</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-git">CodeAcademy Learn Git course</a></li>
+            <li><a href="http://ndpsoftware.com/git-cheatsheet.html#loc=index;">Interactive Git Cheat Sheet</a></li>
+            
+        </ul>
+        <a href="index.html">Go to front</a>
         <footer class="site-footer">
             <span class="site-footer-owner"><a href="https://github.com/nerdschoolbergen/home">Nerdschool</a> is maintained by <a href="https://github.com/nerdschoolbergen">nerdschoolbergen</a>.</span>
 
