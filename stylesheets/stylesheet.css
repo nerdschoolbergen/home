@@ -356,10 +356,12 @@ a:hover {
   align-items: center;
   gap: 1em;
   flex-wrap: wrap;
+  max-width: 64rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 42em) {
   .sponsor {
     width: 100%;
-  }  
+  }
 }
