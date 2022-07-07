@@ -349,3 +349,17 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+
+.sponsors {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 42em) {
+  .sponsor {
+    width: 100%;
+  }  
+}
