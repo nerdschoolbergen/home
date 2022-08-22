@@ -360,6 +360,15 @@ a:hover {
   margin: 0 auto;
 }
 
+.contributor {
+  display: flex;
+  gap: 1rem;
+}
+
+.contributor img {
+  align-self: center;
+}
+
 @media screen and (max-width: 42em) {
   .sponsor {
     width: 100%;
