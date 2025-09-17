@@ -350,7 +350,7 @@ a:hover {
   }
 }
 
-.sponsors {
+.donors {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -370,7 +370,7 @@ a:hover {
 }
 
 @media screen and (max-width: 42em) {
-  .sponsor {
+  .donor {
     width: 100%;
   }
 }
