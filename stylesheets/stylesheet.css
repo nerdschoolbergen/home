@@ -382,3 +382,12 @@ a:hover {
     width: 100%;
   }
 }
+.main-content .docs-source {
+  font-size: 0.9rem;
+  color: #606c71;
+}
+
+strong,
+b {
+  font-weight: 600;
+}

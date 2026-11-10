@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop tasks - Bergen Nerdschool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Step-by-step guides for common setup tasks in Bergen Nerdschool workshops, such as setting up Git and GitHub access.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' fonts.googleapis.com; img-src 'self'; font-src fonts.googleapis.com fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+
+<body>
+    <section class="page-header">
+        <h2 class="project-tagline">Common workshop tasks</h2>
+        <a href="/" class="btn">Back to nerdschool.no</a>
+        <a href="https://github.com/nerdschoolbergen" target="_blank" class="btn">GitHub</a>
+    </section>
+
+    <section class="main-content">
+        <h1>
+            <a id="workshop-tasks" class="anchor" href="#workshop-tasks" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>Common workshop tasks
+        </h1>
+
+        <p>Most of our workshops start with the same few setup steps. This page collects them in one place, so you
+            can get them done before the workshop starts and spend the evening on the fun part. If you get stuck,
+            ask one of the organizers - that's what we're there for.</p>
+
+        <ul>
+            <li><a href="#git-github">Setting up Git and GitHub access</a></li>
+        </ul>
+
+        <hr>
+
+        <h2>
+            <a id="git-github" class="anchor" href="#git-github" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>Setting up Git and GitHub access
+        </h2>
+
+        <p>After following these steps you will have Git installed and configured, a GitHub account, and a working
+            way to <code>git push</code> and <code>git pull</code> without being asked for a password.</p>
+
+        <h3>
+            <a id="install-git" class="anchor" href="#install-git" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>1. Install Git
+        </h3>
+
+        <p>Open a terminal. On macOS, look for the app called "Terminal". On Windows, use Windows Terminal or
+            "Git Bash". Then check whether Git is already installed:</p>
+
+        <pre><code>git version</code></pre>
+
+        <p>If it prints a version number, you're good. If the command is unknown, follow GitHub's
+            <a href="https://github.com/git-guides/install-git" target="_blank">Install Git</a> guide.</p>
+
+        <p class="docs-source">GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/set-up-git" target="_blank">Set up Git</a></p>
+
+        <h3>
+            <a id="github-account" class="anchor" href="#github-account" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>2. Create a GitHub account
+        </h3>
+
+        <p>If you don't already have one, <a
+                href="https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github"
+                target="_blank">sign up at github.com</a>. It's free and only takes a minute. Make a note of your
+            GitHub <em>username</em>; you'll need it later.</p>
+
+        <h3>
+            <a id="configure-git" class="anchor" href="#configure-git" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>3. Tell Git who you are
+        </h3>
+
+        <p>Every commit records a name and an email address. Check whether you have already set them:</p>
+
+        <pre><code>git config --global user.name
+git config --global user.email</code></pre>
+
+        <p>If either prints nothing, or the email isn't the one you use on GitHub, set them (replace with your own
+            name and email):</p>
+
+        <pre><code>git config --global user.name "Your Name"
+git config --global user.email your.name@email.com</code></pre>
+
+        <blockquote>
+            <p>Use the same email address as your GitHub account. GitHub uses it to link your commits to your
+                profile; with any other address, your commits won't show up as yours.</p>
+        </blockquote>
+
+        <p>Optionally, make <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> the
+            editor Git opens when it needs you to write something, such as a merge message:</p>
+
+        <pre><code>git config --global core.editor "code --wait"</code></pre>
+
+        <p class="docs-source">GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/setting-your-username-in-git" target="_blank">Setting your username in Git</a>, <a href="https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address" target="_blank">Setting your commit email address</a>, <a href="https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git" target="_blank">Associating text editors with Git</a></p>
+
+        <h3>
+            <a id="check-access" class="anchor" href="#check-access" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>4. Check if you already have access
+        </h3>
+
+        <p>If you have pushed to GitHub before, you may already be set up. There's no reason to set up a second
+            method, so check first.</p>
+
+        <p><strong>HTTPS:</strong> run</p>
+
+        <pre><code>git config --global --get-regexp '^credential'</code></pre>
+
+        <p>If it prints a line containing any of these, a credential helper is already configured and you can skip
+            to <a href="#done">You're done</a>:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Output contains</th>
+                    <th>What it is</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>gh auth git-credential</code></td>
+                    <td>GitHub CLI (what step 5 sets up)</td>
+                </tr>
+                <tr>
+                    <td><code>manager</code></td>
+                    <td>Git Credential Manager</td>
+                </tr>
+                <tr>
+                    <td><code>osxkeychain</code></td>
+                    <td>The macOS keychain helper</td>
+                </tr>
+                <tr>
+                    <td><code>wincred</code></td>
+                    <td>The Windows credential store</td>
+                </tr>
+                <tr>
+                    <td><code>libsecret</code> or <code>store</code></td>
+                    <td>Common helpers on Linux</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>SSH:</strong> run</p>
+
+        <pre><code>ssh -T git@github.com</code></pre>
+
+        <p>A reply like <code>Hi &lt;your-username&gt;! You've successfully authenticated...</code> means SSH works.
+            (It also says GitHub doesn't provide shell access - that's expected, not an error.) Keep using SSH, and
+            pick the <strong>SSH</strong> tab whenever GitHub shows you a repository address, so it starts with
+            <code>git@github.com:</code>. If you get <code>Permission denied (publickey)</code> instead, continue with
+            step 5.</p>
+
+        <p class="docs-source">GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git" target="_blank">Caching your GitHub credentials in Git</a>, <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection" target="_blank">Testing your SSH connection</a></p>
+
+        <h3>
+            <a id="github-cli" class="anchor" href="#github-cli" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>5. Log in with the GitHub CLI
+        </h3>
+
+        <p>You can't use your GitHub password with Git - GitHub removed password authentication in 2021 - so
+            something has to store a credential for you. In our workshops we use HTTPS together with the
+            <a href="https://cli.github.com/" target="_blank">GitHub CLI</a> (<code>gh</code>), because it sets up
+            both itself and Git in one go, with no keys to manage.</p>
+
+        <p>Install it:</p>
+
+        <pre><code>winget install --id GitHub.cli    # Windows
+brew install gh                   # macOS</code></pre>
+
+        <p>On Linux, follow the <a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+                target="_blank">installation instructions for your distribution</a>. You may need to open a new
+            terminal window after installing before <code>gh</code> is found.</p>
+
+        <p>Then log in:</p>
+
+        <pre><code>gh auth login</code></pre>
+
+        <p>Answer the prompts like this:</p>
+
+        <ul>
+            <li><strong>What account do you want to log into?</strong> <code>GitHub.com</code></li>
+            <li><strong>What is your preferred protocol for Git operations?</strong> <code>HTTPS</code></li>
+            <li><strong>Authenticate Git with your GitHub credentials?</strong> <code>Yes</code></li>
+            <li><strong>How would you like to authenticate?</strong> <code>Login with a web browser</code>, then
+                follow the steps in your browser</li>
+        </ul>
+
+        <blockquote>
+            <p>The third answer is the important one. It registers <code>gh</code> as Git's credential helper, so
+                <code>git push</code> and <code>git pull</code> work without asking you for anything.</p>
+        </blockquote>
+
+        <p>Check that it worked:</p>
+
+        <pre><code>gh auth status
+git config --global --get-regexp '^credential'</code></pre>
+
+        <p><code>gh auth status</code> should say you are logged in, and the second command should print a line
+            ending in <code>gh auth git-credential</code>. If it prints nothing, you probably answered "No" to the
+            third prompt. Fix it without logging in again:</p>
+
+        <pre><code>gh auth setup-git</code></pre>
+
+        <p>Note that <code>gh</code> registers itself only for <code>github.com</code>
+            (as <code>credential.https://github.com.helper</code>), which is why we list all credential settings
+            instead of asking for plain <code>credential.helper</code> - that one would look empty even when
+            everything works.</p>
+
+        <p class="docs-source">GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/about-remote-repositories" target="_blank">About remote repositories</a>, <a href="https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git" target="_blank">Caching your GitHub credentials in Git</a>. GitHub CLI manual: <a href="https://cli.github.com/manual/gh_auth_login" target="_blank">gh auth login</a>, <a href="https://cli.github.com/manual/gh_auth_setup-git" target="_blank">gh auth setup-git</a></p>
+
+        <h3>
+            <a id="alternatives" class="anchor" href="#alternatives" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>Alternatives
+        </h3>
+
+        <ul>
+            <li><strong>Git Credential Manager</strong> - if you'd rather not install the GitHub CLI. It's included
+                with Git for Windows 2.29 and newer. On macOS, run
+                <code>brew install --cask git-credential-manager</code>. On Linux, see the <a
+                    href="https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/install.md"
+                    target="_blank">installation guide</a>.</li>
+            <li><strong>SSH keys</strong> - just as good, and you'll meet them on real projects, but they take
+                longer to set up. See <a
+                    href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"
+                    target="_blank">Connecting to GitHub with SSH</a>.</li>
+            <li><strong>GitHub Desktop</strong> - for workshops that don't require the command line,
+                <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> is a beginner-friendly
+                option that installs Git and handles login for you.</li>
+        </ul>
+
+        <p>GitHub's own write-up of the HTTPS options is <a
+                href="https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git"
+                target="_blank">Caching your GitHub credentials in Git</a>.</p>
+
+        <h3>
+            <a id="done" class="anchor" href="#done" aria-hidden="true"><span aria-hidden="true"
+                    class="octicon octicon-link"></span></a>You're done
+        </h3>
+
+        <p>The first time you <code>git push</code> over HTTPS you may see a browser window or a prompt. After that,
+            pushing and pulling should just work. To try it out, clone one of our workshop repositories:</p>
+
+        <pre><code>git clone https://github.com/nerdschoolbergen/git.git</code></pre>
+
+        <p>Some workshops ask you to <em>fork</em> the repository first (make your own copy on GitHub with the
+            <strong>Fork</strong> button), and then clone your fork:
+            <code>https://github.com/&lt;your-username&gt;/&lt;repository&gt;</code>. The workshop's exercises will
+            tell you which to do.</p>
+
+        <p class="docs-source">GitHub Docs: <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Cloning a repository</a>, <a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo" target="_blank">Fork a repository</a></p>
+
+        <footer class="site-footer">
+            <img src="/nerdschool-logo-no-text.png" alt="Nerdschool owl" height="50px" />
+        </footer>
+    </section>
+</body>
+
+</html>
